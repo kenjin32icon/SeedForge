@@ -20,15 +20,15 @@
             font-family: 'Inter', sans-serif;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: var(--text);
-            line-height: 1.8;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 0 30px;
+            padding: 0 15px;
         }
 
         nav {
@@ -43,7 +43,8 @@
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            flex-direction: column;
+            gap: 1rem;
             padding: 1.2rem 0;
         }
 
@@ -63,8 +64,8 @@
             background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
             border: 1px solid rgba(212,175,55,0.2);
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
+            padding: 1.5rem;
+            margin: 1rem 0;
             transition: var(--transition);
         }
 
@@ -73,9 +74,10 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
 
-        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
-        h2 { font-size: 2.5rem; margin-bottom: 2rem; }
-        h3 { font-size: 1.8rem; margin-bottom: 1.2rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        h4 { font-size: 1.2rem; }
 
         .section-header {
             display: flex;
@@ -110,7 +112,7 @@
         }
 
         .process-step {
-            padding-left: 2rem;
+            padding-left: 1rem;
             position: relative;
         }
 
@@ -169,6 +171,31 @@
         .doc-link:hover {
             text-decoration: underline;
         }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.4rem; }
+            .nav-links {
+                padding: 0.5rem 0;
+            }
+            .process-step {
+                padding-left: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.2rem; }
+            .nav-links a {
+                padding: 0.5rem 1rem;
+            }
+            .card {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -187,7 +214,7 @@
     <header id="header" class="container" style="padding: 8rem 0; text-align: center;">
         <img src="https://i.pinimg.com/736x/bf/c4/2f/bfc42f279b46d452ffda64bfa2b97d03.jpg" 
              alt="Seedforge logo" 
-             style="width: 250px; height: 250px; border-radius: 50%; margin-bottom: 2rem;">
+             style="width: 250px; height: auto; border-radius: 50%; margin-bottom: 2rem;">
         <h1>Cultivating Innovation Through Community</h1>
         <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
             A decentralized ecosystem merging blockchain, creativity, and collaborative development
@@ -402,7 +429,7 @@
                     </div>
                     <div class="process-step">
                         <h4>Start Engaging</h4>
-                        <p >Participate in community activities</p>
+                        <p>Participate in community activities</p>
                     </div>
                 </div>
                 <button class="doc-link" style="margin-top: 1rem;">Sign Up Now</button>
